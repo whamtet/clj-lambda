@@ -5,7 +5,7 @@
 (defn execute-form [s]
   (->
     (client/post "https://wrtbygcox0.execute-api.us-west-2.amazonaws.com/dev/test"
-                 {:body s})
+                 {:body s :query-params {"password" (System/getenv "CLJ_LAMBDA_PASSWORD")}})
     :body
     read-string))
 

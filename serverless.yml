@@ -22,6 +22,8 @@ provider:
   runtime: java8
   region: us-west-2
   timeout: 60
+  environment:
+    password: ${env:CLJ_LAMBDA_PASSWORD}
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
